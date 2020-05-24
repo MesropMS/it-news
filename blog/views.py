@@ -35,4 +35,6 @@ def search(request):
 	group = Group.objects.all()
 	if request.method == 'POST':
 		post = Post.objects.filter(title__icontains=request.POST['search'])
+		if post.count == 0:
+			pass
 	return render(request,'detail.html',{'post':post,'group':group})
