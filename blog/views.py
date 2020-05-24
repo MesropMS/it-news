@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Post,Group
-import smtplib
+from django.contrib import messages
 
 
 def main(request):
