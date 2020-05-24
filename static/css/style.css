@@ -9,7 +9,7 @@ body{
 }
 .search-form{
     margin-bottom:50px;
-    margin-right:10px;
+    margin-top:20px;
 }
 .ss{
     height:40px;
@@ -113,6 +113,9 @@ body{
     .nav-links.active{
         width: 100%;
         top: 15%;
+    }
+    .ss{
+        margin-bottom:10px;
     }
     .logo{
         margin-left: 50px;
