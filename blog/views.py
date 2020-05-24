@@ -29,5 +29,5 @@ def about(request):
 def contact(request):
 	group = Group.objects.all()
 	if request.method == 'POST':
-		send_mail( request.POST['sub'], request.POST['msg'], settings.EMAIL_HOST_USER,['mesrop.araqelyan.09@gmail.com'])
+		pass
 	return render(request,'contact.html',{'group':group})
