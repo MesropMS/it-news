@@ -149,6 +149,10 @@ body{
         padding-top: 40px;
         padding-left: 60px;
     }
+    .search-form{
+        display:flex;
+        flex-direction:column;
+    }
 }
 @media screen and (max-width: 430px){
     .d-flex{
