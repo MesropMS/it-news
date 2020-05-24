@@ -77,12 +77,7 @@ django_heroku.settings(locals())
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.zoho.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'mesrop.araqelyan.04@gmail.com'
-EMAIL_HOST_PASSWORD = 'mospos321'
+
 
 DATABASES = {
     'default': {
