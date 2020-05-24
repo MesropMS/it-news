@@ -17,8 +17,8 @@ body{
     outline:none;
     color:white;
     background-color:#1C2734;
-    boreder-radius:10px;
-    width:80px;
+    boreder-radius:40px;
+    width:300px;
 }
 .nav{
     display: flex;
