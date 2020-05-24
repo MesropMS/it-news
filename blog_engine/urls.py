@@ -17,13 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.staticfiles.urls import static
 from django.conf import settings
-from blog.views import main,group_detail,post_detail,about,contact
+from blog.views import main,group_detail,post_detail,about,contact,search
+
 urlpatterns = [
-    path('',main,name='home'),
-    path('about/',about,name='about'),
+    	path('',main,name='home'),
+	path('search/',search,name='search'),
+    	path('about/',about,name='about'),
 	path('contact/',contact,name='contact'),
 	path('group/<str:slug>',group_detail,name='detail'),
-    path('post/<str:post_slug>',post_detail,name='post_detail'),
-    path('admin/', admin.site.urls),
+    	path('post/<str:post_slug>',post_detail,name='post_detail'),
+    	path('admin/', admin.site.urls),
 ]
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
