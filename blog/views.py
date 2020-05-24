@@ -29,7 +29,7 @@ def about(request):
 def contact(request):
 	group = Group.objects.all()
 	if request.method == 'POST':
-		pass
+		send_mail('subject', 'message', 'mesrop.araqelyan.09@gmail.com', [settings.EMAIL_HOST_USER])
 	return render(request,'contact.html',{'group':group})
 
 def search(request):
