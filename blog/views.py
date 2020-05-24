@@ -31,3 +31,9 @@ def contact(request):
 	if request.method == 'POST':
 		pass
 	return render(request,'contact.html',{'group':group})
+
+def group_detail(request):
+	group = Group.objects.all()
+	if request.method == 'POST':
+		post = Post.objects.filter(title__icontains=request.POST['search'])
+	return render(request,'detail.html',{'post':post,'group':group})
