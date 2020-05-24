@@ -28,18 +28,7 @@ def about(request):
 def contact(request):
 	group = Group.objects.all()
 	if request.method == 'POST':
-		password = 'mospos321'
-		username = 'mesrop.araqelyan.04@gmail.com'
-		subject = request.POST.get('sub')
-		message = request.POST.get('msg')
-		with smtplib.SMTP('smtp.gmail.com',587) as smtp:
-			smtp.ehlo()
-			smtp.starttls()
-			smtp.ehlo()
-			msg = f'Subject:{subject}\n\n{message}'
-	
-			smtp.login(username,password)
-			smtp.sendmail(username,username,msg)
+		pass
 	return render(request,'contact.html',{'group':group})
 
 def search(request):
