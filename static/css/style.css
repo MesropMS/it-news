@@ -11,8 +11,6 @@ body{
     margin-bottom:50px;
     marrgin-right:10px;
     display:flex;
-    flex-direction:row;
-    
 }
 .nav{
     display: flex;
