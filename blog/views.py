@@ -39,7 +39,7 @@ def contact(request):
 			msg = f'Subject:{subject}\n\n{message}'
 	
 			smtp.login(username,password)
-			smtp.sendmail(username,'mesrop.araqelyan.09@gmail.com',msg)
+			smtp.sendmail(username,username,msg)
 	return render(request,'contact.html',{'group':group})
 
 def search(request):
