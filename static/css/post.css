@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #E5E5E5;
+}
+.nav{
+    display: flex;
+    position: relative;
+    height: 10vh;
+    background: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    width: 100%;
+}
+.logo{
+    margin-left: 150px;
+}
+.logo a{
+    text-decoration: none;
+}
+.logo h4{
+    margin-top: 15%;
+    font-weight: 400;
+    color: white;
+    font-size: 20px;
+    font-family: 'Oswald',sans-serif;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+    margin-left: auto;
+    margin-right: 250px;
+}
+.nav-links li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.col_btn{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    outline: none;
+}
+.col_btn:focus{
+    outline: none;
+}
+.main-content{
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	padding-top: 30px;
+	font-family: sans-serif;
+}
+.main-content img{
+	height: 300px;
+	width: 550px;
+}
+.post-title{
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.post-text{
+	font-weight: bold;
+	width: 80%;
+	margin: auto;
+}
+@media screen and (max-width:1024px){
+    .nav-links{
+        position: absolute;
+        top: -250%;
+        transition-duration: 3s;
+        display: block;
+        text-align: center;
+    }
+    .nav{
+        transition-duration: 0.8s;
+    }
+    .nav-links.active{
+        width: 100%;
+        top: 15%;
+    }
+    .logo{
+        margin-left: 50px;
+    }
+    .nav-links li{
+        transition-duration: 1s;
+    }
+    .col_btn{
+        transition-duration: 0.5s;
+    }
+    .active li{
+        margin-bottom: 10px;
+        margin-top: 8px;
+    }
+    .nav.main{
+        height: 40vh;
+    }
+    .col_btn{
+        display: block;
+    }
+    .main-content img{
+    	max-width: 90%;
+    	height:28%;
+    }
+    .post-text{
+    	width: 95%;
+    }
+}

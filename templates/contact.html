@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+	<title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script>
+        function sas() {
+            //Variables
+            let m = document.getElementById('bar')
+            let nav_links = document.getElementById('nav-links')
+            let c = document.getElementById('collapse')
+
+            // fucntional
+            if(c.className === 'fas fa-bars'){
+                c.className += 'fas fa-times'
+            }else{
+                c.className = 'fas fa-bars'
+            }
+            nav_links.classList.toggle('active') 
+            m.classList.toggle('main')
+        } 
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="bar">
+            <div class="logo">
+                <a href=""><h4>IT-NEWS</h4></a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                {% for g in group %}
+                  <li><a href="/group/{{g.slug}}">{{g.name}}</a></li>
+                {% endfor %}
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+            </ul>
+            <button class="menu_btn" onclick="sas()"><i id = 'collapse' class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="contact-info">
+            <div class="item">
+                <div class="icon">
+                    <i class="i fas fa-phone"></i>                    
+                </div>
+                <h3>+374 77 46 56 85</h3>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <i class="i fas fa-envelope"></i>
+                </div>
+                 <h3>mesrop.araqelyan.04@gmail.com</h3>
+            </div>
+        </div>
+        <form class="send-email" method="POST">
+            {% csrf_token %}
+            <input type="mail" name="mail" class="in" placeholder="email">
+            <input type="text" name="sub" class="in" placeholder="subject">
+            <textarea  name="msg" rows="10" placeholder="messsage"></textarea>
+            <input type="submit" class="btn" value="Send">
+        </form>
+    </div>
+</body>
+</html>

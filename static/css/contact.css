@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #E5E5E5;
+}
+.navbar{
+    display: flex;
+    height: 10vh;
+    background: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    width: 100%;
+}
+.logo{
+    margin-left: 150px;
+    font-family: 'Oswald', sans-serif;
+    margin-top: all;
+}
+.logo a{
+    text-decoration: none;
+}
+.logo h4{
+    margin-top: 15%;
+    font-weight: 400;
+    color: white;
+    font-size: 25px;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+    margin-left: auto;
+    margin-right: 250px;
+}
+.nav-links li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.menu_btn{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    outline: none;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.icon{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    margin-right: 45px;
+    background-color: #3494db;
+    align-items: center;
+    border-radius: 50%;
+}
+.icon i{
+    margin-left: 35%;
+    color: white;
+}
+.contact-info{
+    margin-right: 350px;
+}
+.item h3{
+    font-size: 23px;
+    font-family: 'Oswald',sans-serif;
+}
+.send-email{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.in{
+    margin-bottom: 10px;
+    height: 40px;
+    border: none;
+    outline: none;
+    text-align: center; 
+}
+textarea{
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    text-align: center;
+
+}
+.btn{
+    width: 120px;
+    height: 40px;
+    margin-left: auto;
+    background-color: #3494db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+@media screen and (max-width:1024px){
+    .container{
+        flex-direction: column;
+    }
+    .item h3{
+        font-size: 21px;
+    }
+    .icon{
+        width: 55px;
+
+        margin-right: 10px;
+    }
+    .contact-info{
+        margin-right:0;
+    }
+    .nav-links{
+        position: absolute;
+        top: -150%;
+        transition-duration: 3s;
+        display: block;
+        text-align: center;
+    }
+    .navbar{
+        transition-duration: 0.8s;
+    }
+    .nav-links.active{
+        width: 100%;
+        top: 15%;
+    }
+    .logo{
+        margin-left: 50px;
+    }
+    .nav-links li{
+        transition-duration: 1s;
+    }
+    .menu_btn{
+        transition-duration: 0.5s;
+    }
+    .active li{
+        margin-bottom: 10px;
+        margin-top: 8px;
+    }
+    .navbar.main{
+        height: 40vh;
+    }
+    .menu_btn{
+        display: block;
+    }
+}

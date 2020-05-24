@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #E5E5E5;
+}
+.navbar{
+    display: flex;
+    height: 10vh;
+    background: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+}
+.logo{
+    margin-left: 150px;
+    font-family: 'Oswald', sans-serif;
+}
+.logo h4{
+    margin-top: 15%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 22px;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+    margin-left: auto;
+    margin-right: 250px;
+}
+.nav-links li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.menu_btn{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    outline: none;
+}
+.about-content{
+    padding-top: 120px;
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+.about-content img{
+    height: 300px;
+    width: 380px;
+    margin-right: 20px;
+}
+.about-text{
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+@media screen and (max-width:901px){
+    .nav-links{
+        position: absolute;
+        top: -300%;
+        transition-duration: 3s;
+        display: block;
+        text-align: center;
+    }
+    .navbar{
+        transition-duration: 0.8s;
+    }
+    .nav-links.active{
+        width: 100%;
+        top: 15%;
+    }
+    .logo{
+        margin-left: 50px;
+    }
+    .nav-links li{
+        transition-duration: 1s;
+    }
+    .menu_btn{
+        transition-duration: 0.5s;
+    }
+    .active li{
+        margin-bottom: 10px;
+        margin-top: 8px;
+    }
+    .navbar.main{
+        height: 40vh;
+    }
+    .menu_btn{
+        display: block;
+    }
+    .about-content{
+        display: block;
+        text-align: center;
+        padding-top: 100px;
+    }
+    .about-content img{
+        width: 65%;
+        height: 15%;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+	<link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <meta charset="UTF-8">
+    <script>
+        function sas() {
+            //Variables
+            let m = document.getElementById('bar')
+            let nav_links = document.getElementById('nav-links')
+            let c = document.getElementById('collapse')
+
+            // fucntional
+            if(c.className === 'fas fa-bars'){
+                c.className += 'fas fa-times'
+            }else{
+                c.className = 'fas fa-bars'
+            }
+            nav_links.classList.toggle('active') 
+            m.classList.toggle('main')
+        } 
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<title>About</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="bar">
+            <div class="logo">
+                <a href="" style="text-decoration: none;"><h4>IT-NEWS</h4></a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                {% for g in group %}
+                  <li><a href="/group/{{g.slug}}">{{g.name}}</a></li>
+                {% endfor %}                
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+            </ul>
+            <button class="menu_btn" onclick="sas()"><i id = 'collapse' class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+    <div class="about-content">
+    	<img src="{% static 'img/blog.jpg' %}">
+    	<p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+    </div>
+</body>
+</html>

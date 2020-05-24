@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+	<title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script>
+        function sas() {
+            //Variables
+            let m = document.getElementById('bar')
+            let nav_links = document.getElementById('nav-links')
+            let c = document.getElementById('collapse')
+
+            // fucntional
+            if(c.className === 'fas fa-bars'){
+                c.className += 'fas fa-times'
+            }else{
+                c.className = 'fas fa-bars'
+            }
+            nav_links.classList.toggle('active') 
+            m.classList.toggle('main')
+        } 
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="nav" id="bar">
+            <div class="logo">
+                <a href="{% url 'home'%}" style="text-decoration: none;"><h4>IT-NEWS</h4></a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                {% for g in group %}
+                  <li><a href="/group/{{g.slug}}">{{g.name}}</a></li>
+                {% endfor %}
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+            </ul>
+            <button class="col_btn" onclick="sas()"><i id = 'collapse' class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="d-flex flex-wrap">
+          {% for p in post %}
+            <div class="card">
+              <img class="card-img-top" src="{{p.img.url}}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{p.title}}</h5>
+                <p class="card-text">{{p.text|truncatewords:10}}</p>
+                <a href="/post/{{p.slug}}" class="btn btn-primary">View</a>
+                <span>view:{{p.view}}</span>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
