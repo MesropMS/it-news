@@ -36,5 +36,5 @@ def search(request):
 	if request.method == 'POST':
 		post = Post.objects.filter(title__icontains=request.POST['search'])
 		if post.count == 0:
-			pass
+			messages.info(request,f'by search {request.POST['search']} result 0')
 	return render(request,'detail.html',{'post':post,'group':group})
