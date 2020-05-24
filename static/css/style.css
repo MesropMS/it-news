@@ -15,7 +15,8 @@ body{
     height:40px;
     border:none;
     outline:none;
-    color:black;
+    color:white;
+    background-color:#1C2734;
 }
 .nav{
     display: flex;
