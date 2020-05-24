@@ -42,7 +42,7 @@
         </nav>
     </header>
     <div class="container">
-	    <form action = '{% url 'search' %}' method = 'POST' style='margin-bottom:50px;display:flex;flex-direction:row;justify-content:space-around;'>
+	    <form action = '{% url 'search' %}' method = 'POST' class='search-form'>
 		{% csrf_token %}
 	    	<input type='text' name='search' class='ss' placeholder = 'search'>
 	    	<input type='submit' value = 'search' class= 'btn'>
