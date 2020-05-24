@@ -42,6 +42,10 @@
         </nav>
     </header>
     <div class="container">
+	    <form action = '{% url 'search' %}' method = 'POST'>
+	    	<input type='text' name='search' class='ss' placeholder = 'search'>
+	    	<input type='submit' value = 'search' style = 'background-color:'>
+	    </form>
         <div class="d-flex flex-wrap">
           {% for p in post %}
             <div class="card">
