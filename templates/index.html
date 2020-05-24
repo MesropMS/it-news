@@ -44,7 +44,7 @@
     <div class="container">
 	    <form action = '{% url 'search' %}' method = 'POST' class='search-form'>
 		{% csrf_token %}
-	    	<input type='text' name='search' class='ss' placeholder = 'search'>
+	    	<input type='text' required name='search' class='ss' placeholder = 'search'>
 	    	<input type='submit' value = 'search' class= 'btn'>
 	    </form>
         <div class="d-flex flex-wrap">
