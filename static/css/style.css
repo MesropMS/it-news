@@ -20,6 +20,16 @@ body{
 .logo a{
     text-decoration: none;
 }
+.btn{
+    width: 120px;
+    height: 40px;
+    margin-left: auto;
+    background-color: #3494db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
 .logo h4{
     margin-top: 15%;
     font-weight: 400;
