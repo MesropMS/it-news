@@ -9,7 +9,7 @@ body{
 }
 .search-form{
     margin-bottom:50px;
-    display:flex;
+    margin-right:10px;
 }
 .nav{
     display: flex;
