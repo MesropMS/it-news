@@ -32,7 +32,7 @@ def contact(request):
 		pass
 	return render(request,'contact.html',{'group':group})
 
-def group_detail(request):
+def search(request):
 	group = Group.objects.all()
 	if request.method == 'POST':
 		post = Post.objects.filter(title__icontains=request.POST['search'])
