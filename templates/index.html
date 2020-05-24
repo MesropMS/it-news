@@ -45,7 +45,7 @@
 	    <form action = '{% url 'search' %}' method = 'POST'>
 		{% csrf_token %}
 	    	<input type='text' name='search' class='ss' placeholder = 'search'>
-	    	<input type='submit' value = 'search' style = 'background-color:'>
+	    	<input type='submit' value = 'search' class= 'btn'>
 	    </form>
         <div class="d-flex flex-wrap">
           {% for p in post %}
