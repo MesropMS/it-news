@@ -3,6 +3,7 @@
 <head>
     {% load static %}
 	<link rel="stylesheet" href="{% static 'css/about.css' %}">
+	<link rel"icon" herf="{% static 'img/news.png' %}">
     <meta charset="UTF-8">
     <script>
         function sas() {
@@ -29,7 +30,7 @@
     <header>
         <nav class="navbar" id="bar">
             <div class="logo">
-                <a href="" style="text-decoration: none;"><h4>IT-NEWS</h4></a>
+                <a href="{% url 'home' %}" style="text-decoration: none;"><h4>IT-NEWS</h4></a>
             </div>
             <ul class="nav-links" id="nav-links">
                 {% for g in group %}
