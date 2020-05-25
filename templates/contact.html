@@ -4,6 +4,7 @@
     {% load static %}
 	<title>Contact</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+    <link rel"icon" herf="{% static 'img/news.png' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script>
@@ -28,7 +29,7 @@
     <header>
         <nav class="navbar" id="bar">
             <div class="logo">
-                <a href=""><h4>IT-NEWS</h4></a>
+                <a href="{% url 'about' %}"><h4>IT-NEWS</h4></a>
             </div>
             <ul class="nav-links" id="nav-links">
                 {% for g in group %}
