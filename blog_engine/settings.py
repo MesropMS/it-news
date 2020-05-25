@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hr9r)($dwyj=7w*@v@s-@+6)+z2!wa-9n60$kav7)4@1f2ajq('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['it-news21.herokuapp.com']
 
